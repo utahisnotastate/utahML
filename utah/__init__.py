@@ -1,5 +1,13 @@
 # [utahML/utah/__init__.py]
-from .core import UtahApp, UtahSingularityNexus
+from .core import (
+    Manifold,
+    OracleEyeBridge,
+    UtahApp,
+    UtahSingularityNexus,
+    VoxelMapDebugger,
+    detect_hardware_target,
+    hardware_optimized,
+)
 from .directives import IntentDirectiveResolver, RepositoryContextHarvester
 from .perception import GeometricFeatureExtractor, NativeVisionProcessor, OmniRetina
 
@@ -12,7 +20,15 @@ from .evolution import (
     TopologicalEvolutionPool,
     Transmuter,
 )
-from .data import SemanticFluid, ZeroPointNetwork
+from .data import (
+    BinarySensorDataSource,
+    CSVDataSource,
+    DataManifest,
+    JSONLDataSource,
+    SemanticFluid,
+    StreamVector,
+    ZeroPointNetwork,
+)
 from .ui import OmniGlass, UtahNotebook
 from .acoustic import (
     AcousticConceptEncoder,
@@ -27,6 +43,7 @@ if WaveformMatrixParser is None:
 from .stenographer import HighDensityTelemetryLogger, HolographicStenographer
 from .lazarus import (
     ExecutionSnapshot,
+    ImmunityKernel,
     LazarusCodeSynthesizer,
     LazarusDaemon,
     LazarusStateGuardian,
@@ -34,7 +51,15 @@ from .lazarus import (
     LocalInferenceStub,
     MockInferenceBridge,
 )
-from .forge import GenerativeBlock, OntologicalForge, UtahSynthesisEngine
+from .forge import (
+    AutoMapper,
+    GenerativeBlock,
+    HardwareBridge,
+    ManifestWrappedAsset,
+    OntologicalForge,
+    UtahSynthesisEngine,
+    migrate_legacy_project,
+)
 
 if GenerativeBlock is None:
     del GenerativeBlock, UtahSynthesisEngine
@@ -43,6 +68,7 @@ from .swarm import (
     DistributedSwarmOrchestrator,
     SwarmNodeCoordinate,
 )
+from .migrate import migrate_legacy_project as migrate_project_structure
 
 # Ignite Immortality Protocol automatically upon library import
 LazarusDaemon.ignite()

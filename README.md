@@ -80,6 +80,9 @@ Usage (The Sovereign Namespace):
 import utah
 # Merely importing utah automatically ignites the LazarusDaemon in the background,
 # granting your Python environment autonomic self‑healing for certain errors.
+
+# Optional explicit daemon for target-file patch routing:
+# kernel = utah.ImmunityKernel(target_module="my_module.py")
 ```
 
 ---
@@ -121,8 +124,11 @@ Each `utah` module is designed to make a legacy toolchain unnecessary.
 
 ## Features
 - `LazarusDaemon`: Autonomic zero‑intervention debugging and file healing.
+- `ImmunityKernel`: explicit patch-routing daemon for targeted self-healing.
 - `OmniRetina`: Visually parse any file type—no loaders.
 - `OntologicalForge`: Zero‑iteration model casting (no training loops).
+- `HardwareBridge`: one-command deployment bundling for edge hardware targets.
+- `OracleEyeBridge`: event-driven intent manifold for reactive device workflows.
 - `CognitiveSwarm`: Textless multi‑agent coordination via tensors.
 - `UtahNotebook`: Compile entire applications from mixed “ingredients.”
 - `OmniGlass`: One‑line UI projection from intent.
@@ -238,6 +244,11 @@ nb.export_reality()
 ## Compatibility
 - Python: 3.9+ (required for advanced AST unparse in `LazarusDaemon`).
 - Dependencies: see `requirements.txt` (currently includes `numpy`, `torch`, `opencv-python`, `watchdog`).
+
+## Deployment Quick Commands
+- Auto-fix test: `py -m utah.lazarus --autofix`
+- Watch mode: `py -m utah.lazarus --watch .`
+- Edge deployment bundle: `py -m utah.forge --deploy . --target m5stack --output-dir ../utah_deploy_out`
 
 ## Notes on Safety, Scope, and Reality
 - This repository intentionally explores a bold, teleological programming style. Some claims are aspirational by design; the current implementation is a compact prototype meant for conceptual demonstration and developer joy.

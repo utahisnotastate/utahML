@@ -31,4 +31,10 @@ setup(
         "opencv-python",
         "watchdog",
     ],
+    entry_points={
+        "console_scripts": [
+            "utah-forge=utah.forge:_run_deploy_cli",
+            "utah-migrate=utah.migrate:run_migrate_cli",
+        ]
+    },
 )
