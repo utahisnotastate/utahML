@@ -1,2 +1,5 @@
 google-cloud-aiplatform
 numpy
+torch
+opencv-python
+watchdog

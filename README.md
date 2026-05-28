@@ -14,6 +14,7 @@ A zero‑friction, hyper‑spatial framework that replaces standard Data Science
 - Overview
 - Quickstart
 - Core Architecture
+- Documentation by Audience
   - Lazarus (Autonomic Immune System)
   - Data + Forge (The Data Manifold)
   - Swarm (Hive‑Mind Substrate)
@@ -30,6 +31,32 @@ A zero‑friction, hyper‑spatial framework that replaces standard Data Science
 - Notes on Safety, Scope, and Reality
 - Contributing
 - License
+
+---
+
+## Documentation by Audience
+
+Start with the docs hub:
+
+- `docs/README.md`
+
+Audience-specific paths:
+
+- Enterprise architects and platform teams: `docs/technical/enterprise-architecture.md`
+- Experienced AI/ML developers: `docs/technical/ml-dev-guide.md`
+- Data scientists: `docs/technical/data-scientist-guide.md`
+- Non-technical stakeholders: `docs/non-technical/project-manager-overview.md`
+- Child-friendly manual: `docs/non-technical/child-blacksmith-guide.md`
+- New to programming: `docs/non-technical/new-programmer-quickstart.md`
+- New to ML: `docs/non-technical/new-to-ml-guide.md`
+- Migration from linter-only workflows: `docs/technical/migration-from-linters.md`
+
+Hands-on tutorials:
+
+- `docs/tutorials/01-first-wish-mutation.md`
+- `docs/tutorials/02-watch-mode.md`
+- `docs/tutorials/03-context-grounded-mutation.md`
+- `docs/tutorials/04-nexus-directives-walkthrough.md`
 
 ---
 
@@ -210,7 +237,7 @@ nb.export_reality()
 
 ## Compatibility
 - Python: 3.9+ (required for advanced AST unparse in `LazarusDaemon`).
-- Dependencies: minimal. See `requirements.txt` (currently `numpy`).
+- Dependencies: see `requirements.txt` (currently includes `numpy`, `torch`, `opencv-python`, `watchdog`).
 
 ## Notes on Safety, Scope, and Reality
 - This repository intentionally explores a bold, teleological programming style. Some claims are aspirational by design; the current implementation is a compact prototype meant for conceptual demonstration and developer joy.
@@ -219,6 +246,11 @@ nb.export_reality()
 
 ## Contributing
 Issues and PRs are welcome. Please keep contributions crisp, readable, and aligned with the zero‑friction ethos.
+
+## Releasing
+- Release guide: `RELEASING.md`
+- GitHub repository: [utahisnotastate/utahML](https://github.com/utahisnotastate/utahML)
+- PyPI package: [utahml](https://pypi.org/project/utahml)
 
 ## License
 MIT — see the `LICENSE` or package metadata.

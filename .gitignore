@@ -1,2 +1,43 @@
+# Environments
 .env
-.venv
+.venv/
+venv/
+env/
+
+# Python cache/artifacts
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+.python-version
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Build/package outputs
+build/
+dist/
+*.egg-info/
+*.egg
+pip-wheel-metadata/
+
+# IDE/editor
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Runtime and generated files
+logs/
+manifest_outputs/
+watch_demo/
+demo_code_surface.py
+test_code_surface.py
+
+# OS
+.DS_Store
+Thumbs.db
