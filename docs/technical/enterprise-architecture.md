@@ -79,3 +79,9 @@ The platform has three core operational loops:
 - Percentage of patches accepted without manual edits.
 - Rollback frequency per module.
 - Hotspot files with repeated `; wishes` churn.
+
+## Platform comparison and Formon orchestration
+
+- Architecture map (modules + `execute_unified_multimodal_cycle` vs `execute_formon_cycle`): `docs/ARCHITECTURE.md`
+- Conventional AI/ML vs utahML code comparisons: `docs/technical/conventional-vs-utahml.md`
+- Formon pipeline tutorial: `docs/tutorials/07-formon-cycle-pipeline.md`

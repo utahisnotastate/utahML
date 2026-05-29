@@ -1,4 +1,6 @@
 # [utahML/utah/__init__.py]
+__version__ = "1.3.0"
+
 from .akashic_matrix import AkashicResonanceMatrix
 from .core import (
     Manifold,

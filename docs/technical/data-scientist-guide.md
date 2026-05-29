@@ -48,3 +48,7 @@ Use JSONL logs to track:
 - whether mutation passed AST validation.
 
 This can be useful for experiment traceability and governance.
+
+## Compared to conventional ML stacks
+
+See `docs/technical/conventional-vs-utahml.md` for pandas/PyTorch/RAG-style workflows next to `DataManifest`, `UtahSynthesisEngine`, and `execute_formon_cycle`.

@@ -65,3 +65,9 @@ def risky_operation():
 
 print(risky_operation())
 ```
+
+## Next: unified pipeline
+
+Tutorial 7 chains all ZEO layers in one call via `UtahSingularityNexus.execute_formon_cycle`:
+
+`docs/tutorials/07-formon-cycle-pipeline.md`

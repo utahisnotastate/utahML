@@ -2,6 +2,11 @@
 
 This hub organizes guides and tutorials by audience so each reader can start at the right depth.
 
+## Architecture and Comparisons
+
+- System map and execution paths: `docs/ARCHITECTURE.md`
+- **Conventional AI/ML vs utahML** (side-by-side code for every capability): `docs/technical/conventional-vs-utahml.md`
+
 ## Choose Your Path
 
 - Technical decision-makers and platform teams: `docs/technical/enterprise-architecture.md`
@@ -21,6 +26,7 @@ This hub organizes guides and tutorials by audience so each reader can start at 
 - Tutorial 4: Core orchestration with directives: `docs/tutorials/04-nexus-directives-walkthrough.md`
 - Tutorial 5: Immunity kernel and deploy bundle: `docs/tutorials/05-immunity-kernel-and-deploy.md`
 - Tutorial 6: ZEO-Architect patterns: `docs/tutorials/06-zeo-architect-patterns.md`
+- Tutorial 7: Unified Formon cycle (`execute_formon_cycle`): `docs/tutorials/07-formon-cycle-pipeline.md`
 
 ## Core Concepts
 
@@ -29,6 +35,7 @@ This hub organizes guides and tutorials by audience so each reader can start at 
 - `RepositoryContextHarvester` indexes nearby files to reduce style and architecture drift.
 - `LazarusStateGuardian` wraps runtime execution with remediation hooks and checkpoint rollback.
 - `HighDensityTelemetryLogger` records structured JSONL telemetry for diagnostics.
+- `UtahSingularityNexus.execute_formon_cycle` chains ChronoBuffer, ontological precipitation, HiveMind, and AkashicResonanceMatrix in one call.
 
 ## Operational Safety
 

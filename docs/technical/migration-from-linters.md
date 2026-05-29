@@ -45,3 +45,7 @@ Traditional lint stacks are excellent for detection. utahML adds correction and 
 - Week 2: two high-churn modules.
 - Week 3: project-wide dev-only enablement.
 - Week 4+: policy decision for staging/production usage.
+
+## Broader AI/ML comparisons
+
+For how utahML compares to conventional training, RAG, agents, and orchestration (not only linters), see `docs/technical/conventional-vs-utahml.md`.

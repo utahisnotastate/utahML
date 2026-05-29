@@ -45,15 +45,15 @@ git push origin main
 ## 5) Tag release
 
 ```bash
-git tag v1.1.0
-git push origin v1.1.0
+git tag v1.3.0
+git push origin v1.3.0
 ```
 
 ## 6) Optional: create GitHub release
 
-Create a release from tag `v1.1.0` with highlights:
+Create a release from tag `v1.3.0` with highlights:
 
-- multi-audience docs and tutorials under `docs/`
-- enhanced `.gitignore` hygiene
-- packaging metadata + modern `pyproject.toml`
-- watcher-ready `; wishes` workflow docs
+- unified `execute_formon_cycle` SOTA pipeline on `UtahSingularityNexus`
+- `docs/technical/conventional-vs-utahml.md` — conventional vs utahML code comparisons
+- `docs/ARCHITECTURE.md` and tutorial 07 (Formon cycle)
+- see `CHANGELOG.md` for full notes

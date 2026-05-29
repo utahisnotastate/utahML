@@ -39,6 +39,9 @@ A zero‑friction, hyper‑spatial framework that replaces standard Data Science
 Start with the docs hub:
 
 - `docs/README.md`
+- `CHANGELOG.md`
+- Architecture map: `docs/ARCHITECTURE.md`
+- **Conventional vs utahML** (code comparisons for training, RAG, agents, vision, audio, healing, deploy): `docs/technical/conventional-vs-utahml.md`
 
 Audience-specific paths:
 
@@ -57,6 +60,30 @@ Hands-on tutorials:
 - `docs/tutorials/02-watch-mode.md`
 - `docs/tutorials/03-context-grounded-mutation.md`
 - `docs/tutorials/04-nexus-directives-walkthrough.md`
+- `docs/tutorials/05-immunity-kernel-and-deploy.md`
+- `docs/tutorials/06-zeo-architect-patterns.md`
+- `docs/tutorials/07-formon-cycle-pipeline.md` — unified `execute_formon_cycle` SOTA pipeline
+
+---
+
+## Unified Formon cycle (v1.3+)
+
+Single entrypoint that walks the ZEO stack end-to-end:
+
+```python
+import numpy as np
+from utah import UtahSingularityNexus
+
+nexus = UtahSingularityNexus()
+manifest = nexus.execute_formon_cycle(
+    {"intent": "stabilize edge inference", "data": np.random.rand(4, 64)},
+    manifold_dimension=128,
+    swarm_nodes=3,
+)
+print(manifest["status"], manifest["knowledge_manifest"])
+```
+
+See `docs/technical/conventional-vs-utahml.md` for how this compares to conventional training, RAG, and agent frameworks.
 
 ---
 

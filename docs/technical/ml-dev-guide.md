@@ -78,3 +78,9 @@ Keep output strict:
   - Bad: `; wishes: make everything better`
 - Keep one wish per function block.
 - Pair with small commits to isolate generated diffs.
+
+## Conventional stacks vs utahML
+
+For side-by-side code comparing PyTorch training, RAG, agents, vision, audio, Lazarus healing, evolution, and the unified `execute_formon_cycle` pipeline, see `docs/technical/conventional-vs-utahml.md`.
+
+For module layout and the two nexus execution paths, see `docs/ARCHITECTURE.md`.

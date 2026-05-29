@@ -32,3 +32,8 @@ Software teams spend time translating requirements into implementation. utahML s
 - Require pull requests for all generated changes.
 - Track mutation logs in sprint retrospectives.
 - Start with low-risk modules first.
+
+## Further reading
+
+- Documentation hub: `docs/README.md`
+- How utahML compares to conventional AI/ML tooling (non-code summary in section 13): `docs/technical/conventional-vs-utahml.md`
