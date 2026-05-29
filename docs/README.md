@@ -20,6 +20,7 @@ This hub organizes guides and tutorials by audience so each reader can start at 
 - Tutorial 3: Context-grounded mutation with repository harvesting: `docs/tutorials/03-context-grounded-mutation.md`
 - Tutorial 4: Core orchestration with directives: `docs/tutorials/04-nexus-directives-walkthrough.md`
 - Tutorial 5: Immunity kernel and deploy bundle: `docs/tutorials/05-immunity-kernel-and-deploy.md`
+- Tutorial 6: ZEO-Architect patterns: `docs/tutorials/06-zeo-architect-patterns.md`
 
 ## Core Concepts
 

@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="utahml",
-    version="1.1.0",
+    version="1.2.0",
     author="Utah Hans",
     description="The Sovereign AI Operating System. Hyper-spatial computing framework.",
     long_description=long_description,

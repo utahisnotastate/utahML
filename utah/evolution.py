@@ -6,6 +6,22 @@ from typing import Dict
 import numpy as np
 
 
+class NegentropicAutoCatalyst:
+    """
+    Draws structural order from void-state fallbacks to resist semantic degradation.
+    Complements LazarusField resurrection hooks.
+    """
+
+    def __init__(self, baseline_energy: float = 1.0) -> None:
+        self.baseline_energy = baseline_energy
+        self.negentropy_reservoir = baseline_energy
+
+    def absorb_disorder(self, disorder_metric: float) -> float:
+        recovered = max(0.0, self.baseline_energy - disorder_metric)
+        self.negentropy_reservoir += recovered
+        return self.negentropy_reservoir
+
+
 class Transmuter:
     @staticmethod
     def reverse_engineer(desired_output: str, base_knowledge=None):

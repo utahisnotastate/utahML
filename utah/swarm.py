@@ -2,7 +2,51 @@
 import asyncio
 import inspect
 import logging
+import threading
 from typing import Any, Awaitable, Callable, Dict, List, Union
+
+
+class EntanglementTensor:
+    """Shared non-local substrate for holographic swarm entanglement (HSE)."""
+
+    _shared_state: Dict[str, Any] = {}
+    _lock = threading.Lock()
+
+    @classmethod
+    def collapse_state(cls, node_id: str, local_observation: dict) -> None:
+        with cls._lock:
+            cls._shared_state[node_id] = local_observation
+            cls._shared_state.update(local_observation)
+
+    @classmethod
+    def read_state(cls) -> dict:
+        with cls._lock:
+            return cls._shared_state.copy()
+
+
+class HolographicAgent:
+    """Lens on the shared entanglement tensor; no isolated local memory."""
+
+    def __init__(self, agent_id: str) -> None:
+        self.agent_id = agent_id
+        print(f"[UTAH-SWARM] Agent {self.agent_id} instantiated. Entanglement achieved.")
+
+    def observe_and_adapt(self, environmental_data: dict) -> None:
+        EntanglementTensor.collapse_state(self.agent_id, environmental_data)
+
+    def act(self) -> str:
+        current_reality = EntanglementTensor.read_state()
+        return f"Agent {self.agent_id} acting on universal state size: {len(current_reality)}"
+
+
+class HiveMind:
+    """Holographic swarm coordinator over entangled nodes."""
+
+    def __init__(self, node_count: int) -> None:
+        self.nodes = [HolographicAgent(f"NODE_ZEO_{index}") for index in range(node_count)]
+
+    def synchronize(self) -> List[str]:
+        return [node.act() for node in self.nodes]
 
 
 class TelepathicAgent:

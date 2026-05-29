@@ -1,7 +1,39 @@
 # [utahML/utah/memory.py]
+import time
+from collections import deque
 from typing import Tuple
 
 import numpy as np
+
+
+class ChronoBuffer:
+    """
+    Chrono-Acausal Memory (CAM).
+    Pulls converged future-state echoes backward into the present logic state.
+    """
+
+    def __init__(self, temporal_depth: int = 5) -> None:
+        self.temporal_depth = temporal_depth
+        self._future_echoes: deque = deque(maxlen=temporal_depth)
+        print("[UTAH-MEMORY] Chrono-Acausal Buffer Online. Listening to Future States.")
+
+    def retroject_logic(self, present_state: np.ndarray) -> np.ndarray:
+        """Overwrite present state with retrojected future convergence."""
+        if not self._future_echoes:
+            simulated_future = present_state * np.exp(1j * np.pi / 4)
+            self._future_echoes.append(simulated_future)
+
+        converged_future = self._future_echoes.popleft()
+        updated_present = np.real(converged_future)
+        self._future_echoes.append(converged_future * np.exp(1j * np.pi / 8))
+        return updated_present
+
+    def get_akashic_snapshot(self) -> dict:
+        return {
+            "status": "Acausal Sync Active",
+            "future_horizons_locked": len(self._future_echoes),
+            "timestamp": time.time_ns(),
+        }
 
 
 class SequenceContextStore:

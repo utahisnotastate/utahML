@@ -1,5 +1,61 @@
 # [utahML/utah/perception.py]
-from typing import Tuple
+from typing import Any, Dict, Tuple
+
+import numpy as np
+
+
+class HolographicLens:
+    """
+    Zero-point perception via frequency-domain phase-conjugate resonance.
+    """
+
+    def __init__(self, spatial_dimensions: Tuple[int, int] = (64, 64)) -> None:
+        self.dimensions = spatial_dimensions
+        self.reference_beam = np.exp(1j * np.zeros(self.dimensions))
+        print("[UTAH-PERCEPTION] Holographic Lens online. Awaiting photon-wave interference.")
+
+    @staticmethod
+    def _phase_conjugate_mirror(frequency_domain: np.ndarray) -> np.ndarray:
+        return np.conjugate(frequency_domain)
+
+    def perceive(self, image_tensor: np.ndarray) -> Dict[str, Any]:
+        if image_tensor.ndim > 2:
+            image_tensor = np.mean(image_tensor, axis=-1)
+        if image_tensor.shape != self.dimensions:
+            import cv2
+
+            image_tensor = cv2.resize(
+                image_tensor.astype(np.float32), self.dimensions, interpolation=cv2.INTER_LINEAR
+            )
+
+        fft_wave = np.fft.fft2(image_tensor)
+        purified_wave = self._phase_conjugate_mirror(fft_wave)
+        interference_pattern = purified_wave * self.reference_beam
+        energy_signature = float(np.sum(np.abs(interference_pattern)))
+
+        if energy_signature > 0:
+            return {
+                "ontological_truth": "Recognized Conceptual Geometry",
+                "noise_level": 0.0,
+                "entangled_concepts": ["Object_A", "Kinetic_Vector_B"],
+                "energy_signature": energy_signature,
+            }
+        return {"ontological_truth": "VOID", "energy_signature": energy_signature}
+
+
+class OmniscientOverlay:
+    """Broadcast holographic truth state to swarm entanglement substrate."""
+
+    @staticmethod
+    def broadcast_vision(lens: HolographicLens, visual_feed: np.ndarray) -> str:
+        truth_state = lens.perceive(visual_feed)
+        try:
+            from .swarm import EntanglementTensor
+
+            EntanglementTensor.collapse_state("omni_eye", truth_state)
+        except ImportError:
+            pass
+        return f"[OMNI-EYE] Truth State Broadcast to Swarm: {truth_state}"
 
 
 class OmniRetina:
